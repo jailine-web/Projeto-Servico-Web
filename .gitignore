@@ -34,3 +34,7 @@ build/
 
 # Diretório#
 .metadata
+
+/.mvn/wrapper/maven-wrapper.jar
+/mvnw
+*.cmd
