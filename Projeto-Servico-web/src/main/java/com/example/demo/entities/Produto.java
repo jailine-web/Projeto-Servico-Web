@@ -2,9 +2,21 @@ package com.example.demo.entities;
 
 import java.util.Objects;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name = "produtos")
 public class Produto {
 	
+	@jakarta.persistence.Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(unique = true)
 	private Long Id;
+	
 	private String nome;
 	private Double preco;
 	private String descricao;
@@ -61,6 +73,10 @@ public class Produto {
 		Produto other = (Produto) obj;
 		return Objects.equals(Id, other.Id) && Objects.equals(nome, other.nome);
 	}
-	
 
+	@Override
+	public String toString() {
+		return "Produto [Id=" + Id + ", nome=" + nome + ", preco=" + preco + ", descricao=" + descricao + "]";
+	}
+	
 }
