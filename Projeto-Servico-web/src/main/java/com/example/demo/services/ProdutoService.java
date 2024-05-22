@@ -13,10 +13,10 @@ import org.springframework.transaction.annotation.Transactional;
 
 @Service
 public class ProdutoService {
-	
+
 	@Autowired
 	private ProdutoRepository produtoRepository;
-	
+
 	@Transactional
 	public Produto SalvarProduto(Produto produto) {
 		produtoRepository.save(produto);
@@ -24,9 +24,25 @@ public class ProdutoService {
 	}
 
 	@Transactional(readOnly = true)
-	public List<Produto> buscarProdutos(){
+	public List<Produto> buscarProdutos() {
 		List<Produto> produtos = new ArrayList<>();
 		produtos = produtoRepository.findAll();
 		return produtos;
 	}
+
+	@Transactional(readOnly = true)
+	public Produto buscarProdutoPorId(Long id) {
+		Produto prod = produtoRepository.getReferenceById(id);
+
+		Produto produto = new Produto(prod.getId(), prod.getNome(), prod.getPreco(), prod.getDescricao());
+		return produto;
+	}
+
+	@Transactional
+	public void deletarProduto(Long id) {
+
+		produtoRepository.deleteById(id);
+
+	}
+
 }
