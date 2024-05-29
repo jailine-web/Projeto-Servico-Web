@@ -1,0 +1,16 @@
+
+version: '3.1'
+
+services:
+
+  mysql:
+    image: mysql
+    ports:
+     - '3309:3306'
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: Prosper135
+      MYSQL_DATABASE: produtos
+      MYSQL_USER: jailine
+      MYSQL_PASSWORD: Prosper135
+    
