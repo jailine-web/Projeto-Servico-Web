@@ -19,8 +19,8 @@ public class ProdutoService {
 
 	@Transactional
 	public Produto SalvarProduto(Produto produto) {
-		produtoRepository.save(produto);
-		return produto;
+		Produto prod = produtoRepository.save(produto);
+		return prod;
 	}
 
 	@Transactional(readOnly = true)
@@ -39,10 +39,23 @@ public class ProdutoService {
 	}
 
 	@Transactional
-	public void deletarProduto(Long id) {
+	public void deletarProduto( Long id) {
 
 		produtoRepository.deleteById(id);
 
+	}
+	
+	@Transactional
+	public Produto atualizarProduto(Produto produto, Long id) {
+		
+		Produto produtoNovo = produtoRepository.getReferenceById(id);
+		
+		produtoNovo.setNome(produto.getNome());
+		produtoNovo.setPreco(produto.getPreco());
+		produtoNovo.setDescricao(produto.getDescricao());
+		
+		return produtoRepository.save(produtoNovo);
+		
 	}
 
 }

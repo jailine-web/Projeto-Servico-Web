@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
@@ -24,12 +26,12 @@ public class ProdutoController {
 	private ProdutoService produtoService;
 
 	@PostMapping
-	public ResponseEntity<Produto> salvarProduto(Produto produto) {
+	public ResponseEntity<Produto> salvarProduto(@RequestBody Produto produto) {
 
-		Produto prod = produto;
+		Produto prod = produtoService.SalvarProduto(produto);
 		URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(produto.getId())
 				.toUri();
-		produtoService.SalvarProduto(produto);
+		
 		return ResponseEntity.created(uri).body(prod);
 	}
 
@@ -47,11 +49,17 @@ public class ProdutoController {
 	
 	@DeleteMapping (value = "/{id}")
 	public ResponseEntity<Void> deletar(@PathVariable Long id) {
-	 produtoService.buscarProdutoPorId(id);
+	 produtoService.deletarProduto(id);
 	 return ResponseEntity.noContent().build();
 		
 	}
 	
+	@PutMapping(value="/{id}")
+	public ResponseEntity<Produto> atualizarProduto(@RequestBody Produto produto, @PathVariable Long id){
+		Produto prod = produtoService.atualizarProduto(produto, id);
+		return ResponseEntity.ok().body(prod);
+		
+	}
 
 }
 
