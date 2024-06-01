@@ -5,11 +5,10 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.example.demo.entities.Produto;
 import com.example.demo.repositories.ProdutoRepository;
-
-import org.springframework.transaction.annotation.Transactional;
 
 @Service
 public class ProdutoService {
@@ -48,11 +47,21 @@ public class ProdutoService {
 	@Transactional
 	public Produto atualizarProduto(Produto produto, Long id) {
 		
-		Produto produtoNovo = produtoRepository.getReferenceById(id);
+		Produto produtoNovo = new Produto();
 		
-		produtoNovo.setNome(produto.getNome());
-		produtoNovo.setPreco(produto.getPreco());
-		produtoNovo.setDescricao(produto.getDescricao());
+		try {
+			
+			produtoNovo = produtoRepository.getReferenceById(id);
+			
+			produtoNovo.setNome(produto.getNome());
+			produtoNovo.setPreco(produto.getPreco());
+			produtoNovo.setDescricao(produto.getDescricao());
+			
+		}
+		
+		catch(RuntimeException e) {
+			throw new RuntimeException("Identificador não encontrado");
+		}
 		
 		return produtoRepository.save(produtoNovo);
 		
