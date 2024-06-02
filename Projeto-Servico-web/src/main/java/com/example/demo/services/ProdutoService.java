@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.example.demo.dto.ProdutoDTO;
 import com.example.demo.entities.Produto;
 import com.example.demo.repositories.ProdutoRepository;
 
@@ -64,6 +65,11 @@ public class ProdutoService {
 		}
 		
 		return produtoRepository.save(produtoNovo);
+		
+	}
+	
+	public Produto produtoDto (ProdutoDTO produtoDto) {
+		return new Produto(produtoDto.getId(), produtoDto.getNome(), produtoDto.getPreco(), produtoDto.getDescricao());
 		
 	}
 
