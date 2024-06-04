@@ -5,8 +5,10 @@ relacionados ao desenvolvimento web na linguagem Java.
 
 ## Ferramentas utilizadas
 
-  - Spring tools suite (STS)               - Docker
-  - Dbeaver                                - Git/Github
+  - Spring tools suite (STS)
+  - - Docker
+  - Dbeaver
+  - - Git/Github
   - Spring boot
 
 ## Linguagens
