@@ -18,6 +18,13 @@ relacionados ao desenvolvimento web na linguagem Java.
 
 ## Comandos relevantes 
 
+- Cria o arquivo .jar da aplicação (pulando os testes)
+ 
 ```bash
 mvn clean package -DskitTests
+```
+- Comando que executa o docker compose do projeto
+
+```bash
+docker compose up -d --build
 ```
