@@ -1,6 +1,6 @@
 ## Sobre o projeto 🐱‍💻📚
 
-Desafio proposto pela Prosper, programa ponte para o mercado de trabalho, o desafio tem como objetivo fortalecer 
+Desafio proposto pela Prosper, programa ponte para o mercado de trabalho, a proposta tem o objetivo fortalecer 
 nossos conhecimentos com relação ao desenvolvimento web na linguagem Java através de problemas práticos.
 
 ## Ferramentas utilizadas 🛠️
