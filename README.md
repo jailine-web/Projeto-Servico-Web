@@ -8,7 +8,7 @@ relacionados ao desenvolvimento web na linguagem Java.
 | Spring tools suite (STS) | https://spring.io/tools |
 | ----------------------   |     ---          |
 | Docker                   | https://www.docker.com/products/docker-desktop/ |
- 
+| Dbeaver                  | https://dbeaver.io/download/  |
   - Dbeaver
   - - Git/Github
   - Spring boot
