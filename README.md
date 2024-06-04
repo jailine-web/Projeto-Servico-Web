@@ -5,10 +5,10 @@ relacionados ao desenvolvimento web na linguagem Java.
 
 ## Ferramentas utilizadas
 
-| Spring tools suite (STS) | Docker |
+| Spring tools suite (STS) | https://spring.io/tools |
 | ----------------------   | ------ |
-  - Spring tools suite (STS)
-  - - Docker
+| Docker
+ 
   - Dbeaver
   - - Git/Github
   - Spring boot
