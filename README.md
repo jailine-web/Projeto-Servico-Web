@@ -25,6 +25,7 @@ relacionados ao desenvolvimento web na linguagem Java.
 ```bash
 mvn clean package -DskitTests
 ```
+
 - Comando que executa o docker compose do projeto
 
 ```bash
