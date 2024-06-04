@@ -1,4 +1,22 @@
-## Sobre o projeto
+## Sobre o projeto 
 
 Desafio proposto pela Prosper, programa ponte para o mercado de trabalho, com o intuito de fortalecer os conhecimentos 
-relacionados ao desenvolvimento web 
+relacionados ao desenvolvimento web na linguagem Java.
+
+## Ferramentas utilizadas
+
+  ° Spring tools suite (STS)
+  ° Docker 
+  ° Dbeaver
+  ° Git/Github
+  ° Spring boot
+
+## Linguagens
+
+  - Java
+  - SQL
+
+## Comandos relevantes 
+
+`bash
+mvn clean package -DskitTests`
