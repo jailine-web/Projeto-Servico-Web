@@ -6,7 +6,7 @@ relacionados ao desenvolvimento web na linguagem Java.
 ## Ferramentas utilizadas
 
 | Spring tools suite (STS) | https://spring.io/tools |
-| ----------------------   |               |
+| ----------------------   |     ---          |
 | Docker                   | https://www.docker.com/products/docker-desktop/ |
  
   - Dbeaver
