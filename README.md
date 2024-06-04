@@ -18,5 +18,6 @@ relacionados ao desenvolvimento web na linguagem Java.
 
 ## Comandos relevantes 
 
-`bash
-mvn clean package -DskitTests`
+```bash
+mvn clean package -DskitTests
+```
