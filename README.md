@@ -1,9 +1,9 @@
-## Sobre o projeto 
+## Sobre o projeto 🐱‍💻📚
 
 Desafio proposto pela Prosper, programa ponte para o mercado de trabalho, com o intuito de fortalecer os conhecimentos 
 relacionados ao desenvolvimento web na linguagem Java.
 
-## Ferramentas utilizadas
+## Ferramentas utilizadas 🛠️
 
 | Spring tools suite (STS) |  https://spring.io/tools |
 | :----------------------   | :---          |
@@ -13,12 +13,12 @@ relacionados ao desenvolvimento web na linguagem Java.
 | Spring-boot | https://start.spring.io/ |
 
 
-## Linguagens
+## Linguagens 🐱‍💻
 
   - Java
   - SQL
 
-## Comandos relevantes 
+## Comandos relevantes 🌪️✍🏻
 
 - Cria o arquivo .jar da aplicação (pulando os testes)
  
