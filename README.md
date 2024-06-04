@@ -15,8 +15,8 @@ relacionados ao desenvolvimento web na linguagem Java.
 
 ## Linguagens 🐱‍💻
 
-  - Java
-  - SQL
+| Java | SQL |
+
 
 ## Comandos relevantes 🌪️✍🏻
 
